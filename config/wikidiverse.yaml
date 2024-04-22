@@ -18,8 +18,8 @@ data:
   num_workers: 4
   text_max_length: 40
 
-  eval_chunk_size: 6000
-  eval_batch_size: 20
+  eval_chunk_size: 1000
+  eval_batch_size: 4
   embed_update_batch_size: 512
 
 

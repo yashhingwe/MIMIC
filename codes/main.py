@@ -2,9 +2,9 @@ import os
 import torch
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
-from codes.utils.functions import setup_parser
-from codes.model.lightning_mimic import LightningForMIMIC
-from codes.utils.dataset import DataModuleForMIMIC
+from utils.functions import setup_parser
+from model.lightning_mimic import LightningForMIMIC
+from utils.dataset import DataModuleForMIMIC
 
 if __name__ == '__main__':
     args = setup_parser()
