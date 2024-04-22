@@ -44,6 +44,7 @@ class DataModuleForMIMIC(pl.LightningDataModule):
         train_data = _load_json_file(self.args.data.train_file)
         self.train_data = self.setup_dataset_for_mention(train_data)
         self.val_data = self.setup_dataset_for_mention(_load_json_file(self.args.data.dev_file))
+        self.val_data = self.val_data[0::200]
         self.test_data = self.setup_dataset_for_mention(_load_json_file(self.args.data.test_file))
 
     def setup_dataset_for_entity(self, data):
